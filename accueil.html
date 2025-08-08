@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./pictures/icon (2).png" />
+    <script src="./index1.js" defer></script>
+    <title>Akazilink</title>
+</head>
+<body>
+    <main class="bg-gray-300 font-['Poppins']">
+        <nav
+        class="flex w-full justify-between h-[12vh] bg-white items-center rounded-xs shadow-lg font-semibold fixed top-0 z-10"
+      >
+         <button
+          id="hamburgerBtn"
+          class="sm:hidden ml-2 p-2 focus:outline-none"
+          aria-label="Ouvrir le menu"
+        >
+          <svg
+            class="w-7 h-7 text-cyan-900"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="4" y1="6" x2="20" y2="6" />
+            <line x1="4" y1="12" x2="20" y2="12" />
+            <line x1="4" y1="18" x2="20" y2="18" />
+          </svg>
+        </button>
+        <div class="flex items-center ml-6 mt-2">
+          <svg
+            width="32"
+            height="32"
+            viewBox="0 0 60 60"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="mr-2"
+          >
+            <rect x="10" y="20" width="40" height="30" rx="6" fill="#0E7490" />
+            <rect x="18" y="28" width="8" height="14" rx="2" fill="#fff" />
+            <rect x="34" y="28" width="8" height="14" rx="2" fill="#fff" />
+            <rect x="26" y="36" width="8" height="8" rx="2" fill="#fff" />
+            <circle
+              cx="30"
+              cy="18"
+              r="8"
+              fill="#0E7490"
+              stroke="#fff"
+              stroke-width="2"
+            />
+          </svg>
+          <span
+            class="text-xl md:text-2xl font-bold text-cyan-900 tracking-wide"
+            style="font-family: 'Poppins', sans-serif"
+            >Akazilink</span
+          >
+        </div>
+        <ul
+          id="menu"
+          class="sm:flex sm:justify-center hidden items-start justify-start pl-2 rounded-[8px] sm:static sm:flex-row flex-col sm:gap-12 absolute sm:right-55 right-50 top-[10.5vh] sm:h-[10vh] h-[30vh] sm:bg-white bg-white w-[200px] gap-6 sm:items-center sm:w-full mt-2"
+        >
+          <li
+            id="Empljob"
+            class="cursor-pointer sm:hover:border-b-[3px] py-2 md:py-5 px-2 md:px-0"
+          >
+            Trouver un job
+          </li>
+          <li
+            id="EmplTrouvEntreprise"
+            class="cursor-pointer sm:hover:border-b-[3px] py-2 md:py-5 px-2 md:px-0"
+          >
+            Trouver entreprise
+          </li>
+          <li
+            id="EmplCandid"
+            class="cursor-pointer sm:hover:border-b-[3px] py-2 md:py-5 px-2 md:px-0"
+          >
+            Candidatures
+          </li>
+          <li
+            id="EmplOpport"
+            class="cursor-pointer sm:hover:border-b-[3px] py-2 md:py-5 px-2 md:px-0"
+          >
+            Opportunités
+          </li>
+        </ul>
+        <!-- petit profiles -->
+        <div id="miniProfile" class="resultat h-[50px] pr-2 cursor-pointer">
+          <img
+            id="miniProfilePic"
+            src="./pictures/47.jpg"
+            class="rounded-[50%] w-[50px] h-[100%] flex items-center justify-center"
+            alt="Profil"
+          />
+        </div>
+      </nav>
+      <!-- la partie pour la mini section du profil -->
+      <section id="miniSection" class="w-[250px] border-gray-700 sm:left-250 left-45 fixed p-3 font-[450] min-h-auto bg-white flex-col rounded-[6px] shadow-xl hidden">
+            <p class="mb-2 cursor-pointer w-[120px]">Table de bord</p>
+            <p class="mb-2 cursor-pointer w-[50px]">Profil</p>
+            <p class="mb-2 cursor-pointer w-[60px]">Alertes</p>
+            <p class="mb-2 cursor-pointer w-[170px]">Articles sauvegardés</p>
+            <p class="mb-2 cursor-pointer w-[90px]">Paramètres</p><hr class="text-gray-500">
+            <p id="deconnexion" class="mb-2 mt-2  cursor-pointer w-[95px]">Déconnexion</p>
+    </section>
+
+      <section class="flex mt-[12vh]">
+           <!-- Aside bar -->
+      <aside class="w-[30%] sm:flex flex-col hidden items-center mt-10 fixed">
+        <div class="w-[70%] bg-white p-3 rounded-[3px]">
+            <h1 class="font-bold text-[19px]">Mon statut</h1>
+            <p class="text-[12px] text-gray-700">Faites savoir aux entreprises si elles peuvent vous contacter.</p>
+            <select class="pl-2 my-3 outline-none bg-gray-300 py-1 rounded-[5px]" for="">
+            <option value="Disponible">Non Disponible</option>
+            <option value="Disponible">Dispo</option>
+            <option value="Disponible">Dispo</option>
+            <option value="Disponible">Dispo</option>
+            <option value="Disponible">Dispo</option>
+            </select>
+            <p class="text-[12px] text-gray-700">Ajouter votre entreprise actuelle dans votre profil pour pouvoir lui masquer votre statut</p>
+        </div>
+        <div class="w-[70%] bg-white p-3 mt-5 mb-4 rounded-[3px] ">
+            <p class="text-[15px] text-gray-700 mb-3 font-semibold cursor-pointer w-[90px] hover:border-b-amber"><a href="#information"></a>Informations</p>
+            <p class="text-[15px] text-gray-700 mb-3 font-semibold cursor-pointer w-[97px] hover:border-b-amber"><a href="#jobRecherhe"></a>Job recherché</p>
+            <p class="text-[15px] text-gray-700 mb-3 font-semibold cursor-pointer w-[82px] hover:border-b-amber"><a href="#experience"></a>Expériences</p>
+            <p class="text-[15px] text-gray-700 mb-3 font-semibold cursor-pointer w-[185px] hover:border-b-amber"><a href="#competences"></a>Compétences & expertises</p>
+            <p class="text-[15px] text-gray-700 mb-3 font-semibold cursor-pointer w-[162px] hover:border-b-amber"><a href="#diplome"></a>Diplomes & formations</p>
+        </div>
+      </aside>
+      <!-- section  -->
+       <section id="information" class="sm:w-[70%] w-[100%] mt-10 sm:ml-[30%]">
+            <div class="bg-white px-6 rounded-[9px] sm:mr-4 pb-4 pt-7">
+                <h1 class="text-2xl font-semibold pb-3">Complétez votre profil avec votre CV</h1>
+                <p class="text-[15px] text-gray-700">Vos expériences, vos compétences et votre formation seront ajoutées à votre profil depuis votre CV.</p>
+                <div class="flex gap-2 my-4">
+                <div class="text-center text-[15px] w-[100%] sm:w-1/3 flex flex-col justify-center items-center">
+                    <p class="rounded-[50%]"><svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 12 12"><path fill="currentColor" d="M4.25 3.25a1.75 1.75 0 1 1 3.5 0a1.75 1.75 0 0 1-3.5 0m-2 2.25a1.25 1.25 0 1 0 0-2.5a1.25 1.25 0 0 0 0 2.5M11 4.25a1.25 1.25 0 1 1-2.5 0a1.25 1.25 0 0 1 2.5 0M5.25 6C4.56 6 4 6.56 4 7.25V8.5a2 2 0 1 0 4 0V7.25C8 6.56 7.44 6 6.75 6zM3 7.25c0-.289.054-.565.154-.818l-1.231.33a1.25 1.25 0 0 0-.884 1.53l.194.725a2 2 0 0 0 2.45 1.414l.017-.005A3 3 0 0 1 3 8.5zM9 8.5c0 .733-.263 1.405-.7 1.927l.016.004a2 2 0 0 0 2.449-1.414l.194-.725a1.25 1.25 0 0 0-.884-1.53l-1.228-.33c.099.254.153.53.153.818z"/></svg></p>
+                    <p class="font-semibold sm:text-[16px] text-[13px]">Faites-vous repérer par les entreprises</p>
+                </div>
+                <div class="text-center text-[15px] hidden w-[100%] sm:w-1/3 sm:flex flex-col justify-center items-center">
+                    <p><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"><path fill="currentColor" d="M3 20V7h6V4h6v3h6v13zm7-13h4V5h-4z"/></svg></p>
+                    <p class="font-semibold text-[16px]">Faites-vous repérer par les entreprises</p>
+                </div>
+                <div class="text-center w-[100%] sm:w-1/3 text-[15px] hidden sm:flex">
+                    <p>logo</p>
+                    <p class="font-semibold text-[16px]">Faites-vous repérer par les entreprises</p>
+                </div>
+                </div>
+                <div class="flex flex-col items-center mt-2">
+                  <input type="file" id="cvInput" accept="application/pdf" style="display:none">
+                  <button id="uploadCvBtn" class="bg-purple-900 rounded-[6px] flex text-[16px] px-4 py-1.5 text-white font-semibold cursor-pointer items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"><path fill="currentColor" d="M12 15.248q-.161 0-.298-.053t-.267-.184l-2.62-2.619q-.146-.146-.152-.344t.152-.363q.166-.166.357-.169q.192-.003.357.163L11.5 13.65V5.5q0-.213.143-.357T12 5t.357.143t.143.357v8.15l1.971-1.971q.146-.146.347-.153t.366.159q.16.165.163.354t-.162.353l-2.62 2.62q-.13.13-.267.183q-.136.053-.298.053M6.616 19q-.691 0-1.153-.462T5 17.384v-1.923q0-.213.143-.356t.357-.144t.357.144t.143.356v1.923q0 .231.192.424t.423.192h10.77q.23 0 .423-.192t.192-.424v-1.923q0-.213.143-.356t.357-.144t.357.144t.143.356v1.923q0 .691-.462 1.153T17.384 19z"/></svg>
+                    Télécharger mon CV
+                  </button>
+                  <a id="cvLink" href="#" target="_blank" class="bg-purple-900 mt-2 text-white px-4 py-1.5 rounded-[6px] font-semibold flex items-center  justify-center hidden"><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"><path fill="currentColor" d="M18 13h-5v5c0 .55-.45 1-1 1s-1-.45-1-1v-5H6c-.55 0-1-.45-1-1s.45-1 1-1h5V6c0-.55.45-1 1-1s1 .45 1 1v5h5c.55 0 1 .45 1 1s-.45 1-1 1"/></svg>Voir mon CV</a>
+                </div>
+            </div>
+            <!-- an account -->
+             <div class="bg-white px-6 rounded-[9px] sm:mr-4 pb-4 mt-5">
+                <div class="flex items-center pt-2">
+                    <div class="sm:h-[12vh] w-full flex gap-3 ">
+                        <img id="profilePic" class="rounded-[50%] sm:w-[70px] w-[40px] sm:h-[70px] h-[40px] object-cover" src="./pictures/47.jpg">
+                        <div class="flex flex-col justify-center">
+                            <!-- nom du profil dynamique -->
+                            <p id="userFullname" class="text-xl font-semibold"></p>
+                            <p id="userEmail" class="sm:text-[14px] text-[12px] text-gray-500 font-[400]"></p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center mt-4">
+                      <input type="file" id="profileInput" accept="image/*" style="display:none">
+                      <button id="changePicBtn" class="border px-1 py-1 flex items-center rounded-[4px] cursor-pointer font-semibold text-[12px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"><path fill="currentColor" d="M5 18.89h1.414l9.314-9.314l-1.414-1.414L5 17.476zm16 2H3v-4.243L16.435 3.212a1 1 0 0 1 1.414 0l2.829 2.829a1 1 0 0 1 0 1.414L9.243 18.89H21zM15.728 6.748l1.414 1.414l1.414-1.414l-1.414-1.414z"/></svg>
+                        Modifier</button>
+                    </div>
+                </div>
+             </div>
+             <!-- Job recherché -->
+              <div id="jobRecherhe" class="bg-white px-6 rounded-[9px] sm:mr-4 pb-4 mt-5">
+                    <div class="flex items-center py-4">
+                    <div class="h-[12vh] w-full flex gap-3 ">
+                        <div class="flex flex-col justify-center">
+                            <p class="text-[25px] font-semibold">Job recherché</p>
+                            <p class="text-gray-500 text-[15px]">Dites-en aux recruteurs sur le job que vous cherchez.</p>
+                        </div>
+                    </div>
+                    <button class="border px-1 py-1 flex items-center rounded-[4px] cursor-pointer font-semibold text-[12px] mt-4"><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"><path fill="currentColor" d="M18 13h-5v5c0 .55-.45 1-1 1s-1-.45-1-1v-5H6c-.55 0-1-.45-1-1s.45-1 1-1h5V6c0-.55.45-1 1-1s1 .45 1 1v5h5c.55 0 1 .45 1 1s-.45 1-1 1"/></svg>Ajouter</button>
+                </div>
+              </div>
+              <!-- experiences -->
+               <div id="experience" class="bg-white px-6 rounded-[9px] sm:mr-4 pb-4 mt-5">
+                    <div class="flex items-center py-4">
+                    <div class="h-[12vh] w-full flex gap-3 ">
+                        <div class="flex flex-col justify-center">
+                            <p class="text-[25px] font-semibold">Expériences</p>
+                            <p class="text-gray-500 text-[15px]">Parlez-nous de vos expériences passées et actuelles, de vo projets</p>
+                        </div>
+                    </div>
+                    <button class="border px-1 py-1 flex items-center rounded-[4px] cursor-pointer font-semibold text-[12px] mt-4"><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"><path fill="currentColor" d="M18 13h-5v5c0 .55-.45 1-1 1s-1-.45-1-1v-5H6c-.55 0-1-.45-1-1s.45-1 1-1h5V6c0-.55.45-1 1-1s1 .45 1 1v5h5c.55 0 1 .45 1 1s-.45 1-1 1"/></svg>Ajouter</button>
+                </div>
+              </div>
+              <!-- competences & expertises -->
+               <div  id="competences" class="bg-white px-6 rounded-[9px] sm:mr-4 pb-4 mt-5">
+                    <div class="flex items-center py-4">
+                    <div class="h-[12vh] w-full flex gap-3 ">
+                        <div class="flex flex-col justify-center">
+                            <p class="text-[25px] font-semibold">Compétences & expertises</p>
+                            <p class="text-gray-500 text-[15px]">Mettez en avant les compétences et expertises qui vous differencient</p>
+                        </div>
+                    </div>
+                    <button class="border px-1 py-1 flex items-center rounded-[4px] cursor-pointer font-semibold text-[12px] mt-4"><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"><path fill="currentColor" d="M18 13h-5v5c0 .55-.45 1-1 1s-1-.45-1-1v-5H6c-.55 0-1-.45-1-1s.45-1 1-1h5V6c0-.55.45-1 1-1s1 .45 1 1v5h5c.55 0 1 .45 1 1s-.45 1-1 1"/></svg>Ajouter</button>
+                </div>
+              </div>
+              <!-- diplomes et formations -->
+               <div id="diplome" class="bg-white px-6 rounded-[9px] sm:mr-4 pb-4 mt-5">
+                    <div class="flex items-center py-4">
+                    <div class="h-[12vh] w-full flex gap-3 ">
+                        <div class="flex flex-col justify-center">
+                            <p class="text-[25px] font-semibold">Diplômes & formations</p>
+                            <p class="text-gray-500 text-[15px]">Listez vos diplômes, formations et certifications pertinents</p>
+                        </div>
+                    </div>
+                    <button class="border px-1 py-1 flex items-center rounded-[4px] cursor-pointer font-semibold text-[12px] mt-4"><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"><path fill="currentColor" d="M18 13h-5v5c0 .55-.45 1-1 1s-1-.45-1-1v-5H6c-.55 0-1-.45-1-1s.45-1 1-1h5V6c0-.55.45-1 1-1s1 .45 1 1v5h5c.55 0 1 .45 1 1s-.45 1-1 1"/></svg>Ajouter</button>
+                </div>
+              </div>
+       </section>
+    </main>
+</body>
+</html>

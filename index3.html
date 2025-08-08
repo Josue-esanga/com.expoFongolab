@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    a <link rel="stylesheet" href="./src/output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./pictures/icon (2).png" />
+    <script src="./index1.js" defer></script>
+    <title>Akazilink</title>
+</head>
+<body class="font-['Poppins'">
+      <nav class="flex md:w-full justify-between h-[12vh] top-0 bg-white items-center rounded-xs shadow-lg font-semibold fixed">
+      <div class="flex items-center ml-2 md:ml-6 mt-2 md:mt-0">
+          <svg width="32" height="32" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-2">
+            <rect x="10" y="20" width="40" height="30" rx="6" fill="#0E7490"/>
+            <rect x="18" y="28" width="8" height="14" rx="2" fill="#fff"/>
+            <rect x="34" y="28" width="8" height="14" rx="2" fill="#fff"/>
+            <rect x="26" y="36" width="8" height="8" rx="2" fill="#fff"/>
+            <circle cx="30" cy="18" r="8" fill="#0E7490" stroke="#fff" stroke-width="2"/>
+          </svg>
+          <span class="text-xl md:text-2xl font-bold text-cyan-900 tracking-wide" style="font-family: 'Poppins', sans-serif;">Akazilink</span>
+        </div>
+        <ul class="flex gap-8 h-screen items-center">
+          <li id="Empljob" class="cursor-pointer hover:border-b-[3px] py-5">Trouver un job</li>
+          <li id="EmplTrouvEntreprise" class="cursor-pointer hover:border-b-[3px] py-5">Trouver entreprise</li>
+          <li id="EmplCandid" class="cursor-pointer hover:border-b-[3px] py-5">Candidatures</li>
+          <li id="EmplOpport" class="cursor-pointer hover:border-b-[3px] py-5">Opportunités</li>
+        </ul>
+        <!-- petit profiles -->
+        <div id="miniProfile" class="resultat h-[50px] pr-2 cursor-pointer" >
+          <img id="miniProfilePic" src="./pictures/47.jpg" class="rounded-[50%] w-[50px] h-[100%] flex items-center justify-center" alt="Profil" />
+        </div>
+      </nav>
+      <!-- la partie pour la mini section du profil -->
+      <section id="miniSection" class="w-[250px] border-gray-700 left-250 fixed p-3 font-[450] min-h-auto bg-gray-100 flex-col rounded-[6px] shadow-xl hidden">
+            <p class="mb-2 cursor-pointer w-[120px]">Table de bord</p>
+            <p class="mb-2 cursor-pointer w-[50px]">Profil</p>
+            <p class="mb-2 cursor-pointer w-[60px]">Alertes</p>
+            <p class="mb-2 cursor-pointer w-[170px]">Articles sauvegardés</p>
+            <p class="mb-2 cursor-pointer w-[90px]">Paramètres</p><hr class="text-gray-500">
+            <p class="mb-2 mt-2  cursor-pointer w-[95px]">Déconnexion</p>
+    </section>
+    <section class="mt-[12vh]">
+      <div class="pl-8 w-full">
+        <h2 class="mt-6 font-semibold text-2xl text-center">
+          Trouver le job de vos reves
+        </h2>
+        <form action="" class="flex w-[96%] mt-6 gap-3">
+          <input
+            class="w-[70%] rounded-2xl border py-1.5 pl-3 outline-gray-400"
+            type="text"
+            placeholder="Recherche"
+          />
+          <input class=" rounded-2xl border py-1.5 pl-3 outline-gray-400" type="text" id="localisation" name="localisation" placeholder="Ex: Burndi, RDCongo">
+          <input class="rounded-2xl border py-1.5 pr-3 outline-gray-400 pl-3.5" list="options-list" id="browser" name="browser" placeholder="Type de job">
+          <datalist id="options-list">
+            <option value="Developpeur web">
+            <option value="Marchand">
+            <option value="Programmeur">
+            <option value="Enseignant">
+          </datalist>
+        </form>
+      </div>
+      </section>
+      <!-- section first -->
+       <section class="">
+           <div class="md:w-full min-h-[40vh] bg-gray-300 mt-3 pb-4 pt-4">
+            <div class="flex justify-between mt-3">
+            <p class="font-bold text-2xl pl-4">Nouvelles entreprise a explorer</p>
+             <button class="border rounded-[5px] px-1.5 py-0.5 mr-4">Decouvrir</button>
+         </div>
+         <hr class="w-[97%] ml-4 mt-2 mb-4">
+         <div class="w-[97%] ml-6 flex gap-3.5 flex-wrap">
+          <div class="w-[24%] border-[1px] border-gray-600 rounded-[8px]">
+          <img class="h-[40vh] w-full rounded-t-[8px] object-cover" src="./Pins/4.jpg">
+          <div class="px-3 flex flex-col rounded-b-[8px] bg-white">
+          <h1 class="font-bold text-[19px]">Employer <br> Magasin</h1>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">CDD / Temporaire</li>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">Cibitoke</li>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">54K a 93K $</li>
+          </ul>
+          <div class="flex justify-between items-center text-[12px]">
+            <p class="font-semibold ">4 offres</p>
+            <button class="border rounded-[5px] px-1.5 py-0.5 text-center my-3">Suivre</button>
+          </div>      
+          </div>
+      </div>
+      <div class="w-[24%] border-[1px] border-gray-600 rounded-[8px]">
+          <img class="h-[40vh] w-full rounded-t-[8px] object-cover" src="./Pins/4.jpg">
+          <div class="px-3 flex flex-col rounded-b-[8px] bg-white">
+          <h1 class="font-bold text-[19px]">Employer <br> Magasin</h1>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">CDD / Temporaire</li>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">Cibitoke</li>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">54K a 93K $</li>
+          </ul>
+          <div class="flex justify-between items-center text-[12px]">
+            <p class="font-semibold ">4 offres</p>
+            <button class="border rounded-[5px] px-1.5 py-0.5 text-center my-3">Suivre</button>
+          </div>      
+          </div>
+      </div>
+      <div class="w-[24%] border-[1px] border-gray-600 rounded-[8px]">
+          <img class="h-[40vh] w-full rounded-t-[8px] object-cover" src="./Pins/4.jpg">
+          <div class="px-3 flex flex-col rounded-b-[8px] bg-white">
+          <h1 class="font-bold text-[19px]">Employer <br> Magasin</h1>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">CDD / Temporaire</li>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">Cibitoke</li>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">54K a 93K $</li>
+          </ul>
+          <div class="flex justify-between items-center text-[12px]">
+            <p class="font-semibold ">4 offres</p>
+            <button class="border rounded-[5px] px-1.5 py-0.5 text-center my-3">Suivre</button>
+          </div>      
+          </div>
+      </div>
+      <div class="w-[24%] border-[1px] border-gray-600 rounded-[8px]">
+          <img class="h-[40vh] w-full rounded-t-[8px] object-cover" src="./Pins/4.jpg">
+          <div class="px-3 flex flex-col rounded-b-[8px] bg-white">
+          <h1 class="font-bold text-[19px]">Employer <br> Magasin</h1>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">CDD / Temporaire</li>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">Cibitoke</li>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">54K a 93K $</li>
+          </ul>
+          <div class="flex justify-between items-center text-[12px]">
+            <p class="font-semibold ">4 offres</p>
+            <button class="border rounded-[5px] px-1.5 py-0.5 text-center my-3">Suivre</button>
+          </div>      
+          </div>
+      </div>
+      <div class="w-[24%] border-[1px] border-gray-600 rounded-[8px]">
+          <img class="h-[40vh] w-full rounded-t-[8px] object-cover" src="./Pins/4.jpg">
+          <div class="px-3 flex flex-col rounded-b-[8px] bg-white">
+          <h1 class="font-bold text-[19px]">Employer <br> Magasin</h1>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">CDD / Temporaire</li>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">Cibitoke</li>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">54K a 93K $</li>
+          </ul>
+          <div class="flex justify-between items-center text-[12px]">
+            <p class="font-semibold ">4 offres</p>
+            <button class="border rounded-[5px] px-1.5 py-0.5 text-center my-3">Suivre</button>
+          </div>      
+          </div>
+      </div>
+      <div class="w-[24%] border-[1px] border-gray-600 rounded-[8px]">
+          <img class="h-[40vh] w-full rounded-t-[8px] object-cover" src="./Pins/4.jpg">
+          <div class="px-3 flex flex-col rounded-b-[8px] bg-white">
+          <h1 class="font-bold text-[19px]">Employer <br> Magasin</h1>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">CDD / Temporaire</li>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">Cibitoke</li>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">54K a 93K $</li>
+          </ul>
+          <div class="flex justify-between items-center text-[12px]">
+            <p class="font-semibold ">4 offres</p>
+            <button class="border rounded-[5px] px-1.5 py-0.5 text-center my-3">Suivre</button>
+          </div>      
+          </div>
+      </div>
+      <div class="w-[24%] border-[1px] border-gray-600 rounded-[8px]">
+          <img class="h-[40vh] w-full rounded-t-[8px] object-cover" src="./Pins/4.jpg">
+          <div class="px-3 flex flex-col rounded-b-[8px] bg-white">
+          <h1 class="font-bold text-[19px]">Employer <br> Magasin</h1>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">CDD / Temporaire</li>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">Cibitoke</li>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">54K a 93K $</li>
+          </ul>
+          <div class="flex justify-between items-center text-[12px]">
+            <p class="font-semibold ">4 offres</p>
+            <button class="border rounded-[5px] px-1.5 py-0.5 text-center my-3">Suivre</button>
+          </div>      
+          </div>
+      </div>
+      <div class="w-[24%] border-[1px] border-gray-600 rounded-[8px]">
+          <img class="h-[40vh] w-full rounded-t-[8px] object-cover" src="./Pins/4.jpg">
+          <div class="px-3 flex flex-col rounded-b-[8px] bg-white">
+          <h1 class="font-bold text-[19px]">Employer <br> Magasin</h1>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">CDD / Temporaire</li>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">Cibitoke</li>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">54K a 93K $</li>
+          </ul>
+          <div class="flex justify-between items-center text-[12px]">
+            <p class="font-semibold ">4 offres</p>
+            <button class="border rounded-[5px] px-1.5 py-0.5 text-center my-3">Suivre</button>
+          </div>      
+          </div>
+      </div>
+       </div>
+       </section>
+       <!-- Section two -->
+        <section class="">
+           <div class="md:w-full min-h-[40vh] bg-gray-300 mt-3 pb-4 pt-4">
+            <div class="flex justify-between mt-3">
+            <p class="font-bold text-2xl pl-4">Entreprise du moment</p>
+             <button class="border rounded-[5px] px-1.5 py-0.5 mr-4">Decouvrir</button>
+         </div>
+         <hr class="w-[97%] ml-4 mt-2 mb-4">
+         <div class="w-[97%] ml-6 flex gap-3.5 flex-wrap">
+          <div class="w-[24%] border-[1px] border-gray-600 rounded-[8px]">
+          <img class="h-[40vh] w-full rounded-t-[8px] object-cover" src="./Pins/4.jpg">
+          <div class="px-3 flex flex-col rounded-b-[8px] bg-white">
+          <h1 class="font-bold text-[19px]">Employer <br> Magasin</h1>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">CDD / Temporaire</li>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">Cibitoke</li>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">54K a 93K $</li>
+          </ul>
+          <div class="flex justify-between items-center text-[12px]">
+            <p class="font-semibold ">4 offres</p>
+            <button class="border rounded-[5px] px-1.5 py-0.5 text-center my-3">Suivre</button>
+          </div>      
+          </div>
+      </div>
+      <div class="w-[24%] border-[1px] border-gray-600 rounded-[8px]">
+          <img class="h-[40vh] w-full rounded-t-[8px] object-cover" src="./Pins/4.jpg">
+          <div class="px-3 flex flex-col rounded-b-[8px] bg-white">
+          <h1 class="font-bold text-[19px]">Employer <br> Magasin</h1>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">CDD / Temporaire</li>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">Cibitoke</li>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">54K a 93K $</li>
+          </ul>
+          <div class="flex justify-between items-center text-[12px]">
+            <p class="font-semibold ">4 offres</p>
+            <button class="border rounded-[5px] px-1.5 py-0.5 text-center my-3">Suivre</button>
+          </div>      
+          </div>
+      </div>
+      <div class="w-[24%] border-[1px] border-gray-600 rounded-[8px]">
+          <img class="h-[40vh] w-full rounded-t-[8px] object-cover" src="./Pins/4.jpg">
+          <div class="px-3 flex flex-col rounded-b-[8px] bg-white">
+          <h1 class="font-bold text-[19px]">Employer <br> Magasin</h1>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">CDD / Temporaire</li>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">Cibitoke</li>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">54K a 93K $</li>
+          </ul>
+          <div class="flex justify-between items-center text-[12px]">
+            <p class="font-semibold ">4 offres</p>
+            <button class="border rounded-[5px] px-1.5 py-0.5 text-center my-3">Suivre</button>
+          </div>      
+          </div>
+      </div>
+      <div class="w-[24%] border-[1px] border-gray-600 rounded-[8px]">
+          <img class="h-[40vh] w-full rounded-t-[8px] object-cover" src="./Pins/4.jpg">
+          <div class="px-3 flex flex-col rounded-b-[8px] bg-white">
+          <h1 class="font-bold text-[19px]">Employer <br> Magasin</h1>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">CDD / Temporaire</li>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">Cibitoke</li>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">54K a 93K $</li>
+          </ul>
+          <div class="flex justify-between items-center text-[12px]">
+            <p class="font-semibold ">4 offres</p>
+            <button class="border rounded-[5px] px-1.5 py-0.5 text-center my-3">Suivre</button>
+          </div>      
+          </div>
+      </div>
+      <div class="w-[24%] border-[1px] border-gray-600 rounded-[8px]">
+          <img class="h-[40vh] w-full rounded-t-[8px] object-cover" src="./Pins/4.jpg">
+          <div class="px-3 flex flex-col rounded-b-[8px] bg-white">
+          <h1 class="font-bold text-[19px]">Employer <br> Magasin</h1>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">CDD / Temporaire</li>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">Cibitoke</li>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">54K a 93K $</li>
+          </ul>
+          <div class="flex justify-between items-center text-[12px]">
+            <p class="font-semibold ">4 offres</p>
+            <button class="border rounded-[5px] px-1.5 py-0.5 text-center my-3">Suivre</button>
+          </div>      
+          </div>
+      </div>
+      <div class="w-[24%] border-[1px] border-gray-600 rounded-[8px]">
+          <img class="h-[40vh] w-full rounded-t-[8px] object-cover" src="./Pins/4.jpg">
+          <div class="px-3 flex flex-col rounded-b-[8px] bg-white">
+          <h1 class="font-bold text-[19px]">Employer <br> Magasin</h1>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">CDD / Temporaire</li>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">Cibitoke</li>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">54K a 93K $</li>
+          </ul>
+          <div class="flex justify-between items-center text-[12px]">
+            <p class="font-semibold ">4 offres</p>
+            <button class="border rounded-[5px] px-1.5 py-0.5 text-center my-3">Suivre</button>
+          </div>      
+          </div>
+      </div>
+      <div class="w-[24%] border-[1px] border-gray-600 rounded-[8px]">
+          <img class="h-[40vh] w-full rounded-t-[8px] object-cover" src="./Pins/4.jpg">
+          <div class="px-3 flex flex-col rounded-b-[8px] bg-white">
+          <h1 class="font-bold text-[19px]">Employer <br> Magasin</h1>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">CDD / Temporaire</li>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">Cibitoke</li>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">54K a 93K $</li>
+          </ul>
+          <div class="flex justify-between items-center text-[12px]">
+            <p class="font-semibold ">4 offres</p>
+            <button class="border rounded-[5px] px-1.5 py-0.5 text-center my-3">Suivre</button>
+          </div>      
+          </div>
+      </div>
+      <div class="w-[24%] border-[1px] border-gray-600 rounded-[8px]">
+          <img class="h-[40vh] w-full rounded-t-[8px] object-cover" src="./Pins/4.jpg">
+          <div class="px-3 flex flex-col rounded-b-[8px] bg-white">
+          <h1 class="font-bold text-[19px]">Employer <br> Magasin</h1>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">CDD / Temporaire</li>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">Cibitoke</li>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">54K a 93K $</li>
+          </ul>
+          <div class="flex justify-between items-center text-[12px]">
+            <p class="font-semibold ">4 offres</p>
+            <button class="border rounded-[5px] px-1.5 py-0.5 text-center my-3">Suivre</button>
+          </div>      
+          </div>
+      </div>
+       </div>
+       </section>
+       <!-- Secteurs populaires -->
+        <section class="w-full">
+            <p class="font-bold text-2xl mt-3 px-4">Secteurs populaires</p>
+            <hr class="my-3 px-4">
+            <div class="w-full flex flex-wrap gap-[1rem] text-center px-4">
+                <div class="w-[32%] h-[25vh] border text-center py-3 rounded-[4px]">
+                    <p>logo</p>
+                    <p class="">Tech</p>
+                    <p class="">ENTREPRISES</p>
+                </div>
+                <div class="w-[32%] h-[25vh] border text-center py-3 rounded-[4px]">
+                    <p>logo</p>
+                    <p class="">Tech</p>
+                    <p class="">ENTREPRISES</p>
+                </div>
+                <div class="w-[32%] h-[25vh] border text-center py-3 rounded-[4px]">
+                    <p>logo</p>
+                    <p class="">Tech</p>
+                    <p class="">ENTREPRISES</p>
+                </div>
+                <div class="w-[32%] h-[25vh] border text-center py-3 rounded-[4px]">
+                    <p>logo</p>
+                    <p class="">Tech</p>
+                    <p class="">ENTREPRISES</p>
+                </div>
+                <div class="w-[32%] h-[25vh] border text-center py-3 rounded-[4px]">
+                    <p>logo</p>
+                    <p class="">Tech</p>
+                    <p class="">ENTREPRISES</p>
+                </div>
+                <div class="w-[32%] h-[25vh] border text-center py-3 rounded-[4px]">
+                    <p>logo</p>
+                    <p class="">Tech</p>
+                    <p class="">ENTREPRISES</p>
+                </div>
+            </div>
+             <!-- section entreprises recents -->
+             <section class="bg-gray-300 mt-4 ">
+                <p class="font-bold text-2xl mt-4">Secteurs populaires</p>
+            <hr class="my-3">
+            <div class="w-full flex flex-wrap gap-6 justify-center">
+                <div class="w-[20%] bg-white p-3.5">
+                    <p>logo</p>
+                    <p>Python</p>
+                    <p>Langage de programmation interprete, multi-paradigme et multiplateformes</p>
+                </div>
+                <div class="w-[20%] bg-white p-3.5">
+                    <p>logo</p>
+                    <p>Python</p>
+                    <p>Langage de programmation interprete, multi-paradigme et multiplateformes</p>
+                </div>
+                <div class="w-[20%] bg-white p-3.5">
+                    <p>logo</p>
+                    <p>Python</p>
+                    <p>Langage de programmation interprete, multi-paradigme et multiplateformes</p>
+                </div>
+                <div class="w-[20%] bg-black p-3.5">
+                    <p class="text-white font-semibold">Plus de 1600 stacks a decouvrir</p>
+                    <button class="bg-amber-300 w-[97%] py-1 rounded-[6px] mt-15 font-semibold">Decouvrir</button>
+                </div>
+            </div>
+            <section class="md:w-[96%] h-[30vh] px-5 bg-white pt-1 mt-8 ml-5 rounded-xl shadow-lg">
+        <p class=" text-2xl font-semibold mt-3">Ne soyez pas seulement la personne qui cherche</p>
+        <p class="text-gray-600 text-[17px]">Soyez ausssi celle aue l'on trouve. Indiquez votre disponibilite et completez votre profil pour que les entreprises qui recrutent vous contactent directement</p>
+        <button class="bg-cyan-900 py-1.5 rounded-xl px-3.5 m-4 text-white font-semibold cursor-pointer">Recevoir des opportunites</button>
+      </section>
+             </section>
+        </section>
+        <section class="">
+           <div class="md:w-full min-h-[40vh] bg-gray-300 mt-3 pb-4 pt-4">
+            <div class="flex justify-between mt-3">
+            <p class="font-bold text-2xl pl-4">Entreprise du moment</p>
+             <button class="border rounded-[5px] px-1.5 py-0.5 mr-4">Decouvrir</button>
+         </div>
+         <hr class="w-[97%] ml-4 mt-2 mb-4">
+         <div class="w-[97%] ml-6 flex gap-3.5 flex-wrap">
+          <div class="w-[24%] border-[1px] border-gray-600 rounded-[8px]">
+          <img class="h-[40vh] w-full rounded-t-[8px] object-cover" src="./Pins/4.jpg">
+          <div class="px-3 flex flex-col rounded-b-[8px] bg-white">
+          <h1 class="font-bold text-[19px]">Employer <br> Magasin</h1>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">CDD / Temporaire</li>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">Cibitoke</li>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">54K a 93K $</li>
+          </ul>
+          <div class="flex justify-between items-center text-[12px]">
+            <p class="font-semibold ">4 offres</p>
+            <button class="border rounded-[5px] px-1.5 py-0.5 text-center my-3">Suivre</button>
+          </div>      
+          </div>
+      </div>
+      <div class="w-[24%] border-[1px] border-gray-600 rounded-[8px]">
+          <img class="h-[40vh] w-full rounded-t-[8px] object-cover" src="./Pins/4.jpg">
+          <div class="px-3 flex flex-col rounded-b-[8px] bg-white">
+          <h1 class="font-bold text-[19px]">Employer <br> Magasin</h1>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">CDD / Temporaire</li>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">Cibitoke</li>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">54K a 93K $</li>
+          </ul>
+          <div class="flex justify-between items-center text-[12px]">
+            <p class="font-semibold ">4 offres</p>
+            <button class="border rounded-[5px] px-1.5 py-0.5 text-center my-3">Suivre</button>
+          </div>      
+          </div>
+      </div>
+      <div class="w-[24%] border-[1px] border-gray-600 rounded-[8px]">
+          <img class="h-[40vh] w-full rounded-t-[8px] object-cover" src="./Pins/4.jpg">
+          <div class="px-3 flex flex-col rounded-b-[8px] bg-white">
+          <h1 class="font-bold text-[19px]">Employer <br> Magasin</h1>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">CDD / Temporaire</li>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">Cibitoke</li>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">54K a 93K $</li>
+          </ul>
+          <div class="flex justify-between items-center text-[12px]">
+            <p class="font-semibold ">4 offres</p>
+            <button class="border rounded-[5px] px-1.5 py-0.5 text-center my-3">Suivre</button>
+          </div>      
+          </div>
+      </div>
+      <div class="w-[24%] border-[1px] border-gray-600 rounded-[8px]">
+          <img class="h-[40vh] w-full rounded-t-[8px] object-cover" src="./Pins/4.jpg">
+          <div class="px-3 flex flex-col rounded-b-[8px] bg-white">
+          <h1 class="font-bold text-[19px]">Employer <br> Magasin</h1>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">CDD / Temporaire</li>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">Cibitoke</li>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">54K a 93K $</li>
+          </ul>
+          <div class="flex justify-between items-center text-[12px]">
+            <p class="font-semibold ">4 offres</p>
+            <button class="border rounded-[5px] px-1.5 py-0.5 text-center my-3">Suivre</button>
+          </div>      
+          </div>
+      </div>
+      <div class="w-[24%] border-[1px] border-gray-600 rounded-[8px]">
+          <img class="h-[40vh] w-full rounded-t-[8px] object-cover" src="./Pins/4.jpg">
+          <div class="px-3 flex flex-col rounded-b-[8px] bg-white">
+          <h1 class="font-bold text-[19px]">Employer <br> Magasin</h1>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">CDD / Temporaire</li>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">Cibitoke</li>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">54K a 93K $</li>
+          </ul>
+          <div class="flex justify-between items-center text-[12px]">
+            <p class="font-semibold ">4 offres</p>
+            <button class="border rounded-[5px] px-1.5 py-0.5 text-center my-3">Suivre</button>
+          </div>      
+          </div>
+      </div>
+      <div class="w-[24%] border-[1px] border-gray-600 rounded-[8px]">
+          <img class="h-[40vh] w-full rounded-t-[8px] object-cover" src="./Pins/4.jpg">
+          <div class="px-3 flex flex-col rounded-b-[8px] bg-white">
+          <h1 class="font-bold text-[19px]">Employer <br> Magasin</h1>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">CDD / Temporaire</li>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">Cibitoke</li>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">54K a 93K $</li>
+          </ul>
+          <div class="flex justify-between items-center text-[12px]">
+            <p class="font-semibold ">4 offres</p>
+            <button class="border rounded-[5px] px-1.5 py-0.5 text-center my-3">Suivre</button>
+          </div>      
+          </div>
+      </div>
+      <div class="w-[24%] border-[1px] border-gray-600 rounded-[8px]">
+          <img class="h-[40vh] w-full rounded-t-[8px] object-cover" src="./Pins/4.jpg">
+          <div class="px-3 flex flex-col rounded-b-[8px] bg-white">
+          <h1 class="font-bold text-[19px]">Employer <br> Magasin</h1>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">CDD / Temporaire</li>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">Cibitoke</li>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">54K a 93K $</li>
+          </ul>
+          <div class="flex justify-between items-center text-[12px]">
+            <p class="font-semibold ">4 offres</p>
+            <button class="border rounded-[5px] px-1.5 py-0.5 text-center my-3">Suivre</button>
+          </div>      
+          </div>
+      </div>
+      <div class="w-[24%] border-[1px] border-gray-600 rounded-[8px]">
+          <img class="h-[40vh] w-full rounded-t-[8px] object-cover" src="./Pins/4.jpg">
+          <div class="px-3 flex flex-col rounded-b-[8px] bg-white">
+          <h1 class="font-bold text-[19px]">Employer <br> Magasin</h1>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">CDD / Temporaire</li>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">Cibitoke</li>
+            <li class="text-[10px] text-gray-700 px-1 py-1 font-semibold">54K a 93K $</li>
+          </ul>
+          <div class="flex justify-between items-center text-[12px]">
+            <p class="font-semibold ">4 offres</p>
+            <button class="border rounded-[5px] px-1.5 py-0.5 text-center my-3">Suivre</button>
+          </div>      
+          </div>
+      </div>
+       </div>
+       </section>
+       <!-- section pre-finale -->
+        <section class="w-full flex gap-6">
+            <div class="w-[31%] pl-4">
+                <h1 class="font-bold text-xl py-2">Secteurs d'activite</h1>
+                <div>
+                    <button class="bg-gray-300 px-1 py-0.5 font-semibold rounded-[4px] text-[12px]">Emploi Business</button>
+                    <button class="bg-gray-300 px-1 py-0.5 font-semibold rounded-[4px] text-[12px]">Emploi Ressources humaines</button>
+                    <button class="bg-gray-300 px-1 py-0.5 font-semibold rounded-[4px] text-[12px]">Emploi Informatique</button>
+                    <button class="bg-gray-300 px-1 py-0.5 font-semibold rounded-[4px] text-[12px]">Emploi Marketing</button>
+                    <button class="bg-gray-300 px-1 py-0.5 font-semibold rounded-[4px] text-[12px]">Emploi Graphisme</button>
+                    <button class="bg-gray-300 px-1 py-0.5 font-semibold rounded-[4px] text-[12px]">Emploi Communication</button>
+                    <button class="bg-gray-300 px-1 py-0.5 font-semibold rounded-[4px] text-[12px]">Emploi Education</button>
+                    <button class="bg-gray-300 px-1 py-0.5 font-semibold rounded-[4px] text-[12px]">Emploi Industrie</button>
+                    <button class="bg-gray-300 px-1 py-0.5 font-semibold rounded-[4px] text-[12px]">Emploi Tourisme</button>
+                    <button class="bg-gray-300 px-1 py-0.5 font-semibold rounded-[4px] text-[12px]">Emploi Secrétariat</button>
+                    <button class="bg-gray-300 px-1 py-0.5 font-semibold rounded-[4px] text-[12px]">Emploi Santé</button>
+                    <button class="bg-gray-300 px-1 py-0.5 font-semibold rounded-[4px] text-[12px]">Emploi Juridique</button>
+                    <button class="bg-gray-300 px-1 py-0.5 font-semibold rounded-[4px] text-[12px]">Emploi Médias</button>
+                    <button class="bg-gray-300 px-1 py-0.5 font-semibold rounded-[4px] text-[12px]">Emploi Logistique</button>
+                    <button class="bg-gray-300 px-1 py-0.5 font-semibold rounded-[4px] text-[12px]">Emploi Restauration</button>
+                    <button class="bg-gray-300 px-1 py-0.5 font-semibold rounded-[4px] text-[12px]">Emploi Environnement et développement durable</button>
+                    <button class="bg-gray-300 px-1 py-0.5 font-semibold rounded-[4px] text-[12px]">Emploi Economie collaborative</button>
+                    <button class="bg-gray-300 px-1 py-0.5 font-semibold rounded-[4px] text-[12px]">Emploi Hotellerie</button>
+                    <button class="bg-gray-300 px-1 py-0.5 font-semibold rounded-[4px] text-[12px]">Emploi Compabilité</button>
+                    <button class="bg-gray-300 px-1 py-0.5 font-semibold rounded-[4px] text-[12px]">Emploi Audit</button>
+                </div>
+            </div>
+             <div class="w-[31%]">
+                <h1 class="font-bold text-xl py-2">Entreprises par régions</h1>
+                <div>
+                    <button class="bg-gray-300 px-1 py-0.5 font-semibold rounded-[4px] text-[12px]">Emploi Business</button>
+                    <button class="bg-gray-300 px-1 py-0.5 font-semibold rounded-[4px] text-[12px]">Emploi Ressources humaines</button>
+                    <button class="bg-gray-300 px-1 py-0.5 font-semibold rounded-[4px] text-[12px]">Emploi Informatique</button>
+                    <button class="bg-gray-300 px-1 py-0.5 font-semibold rounded-[4px] text-[12px]">Emploi Marketing</button>
+                    <button class="bg-gray-300 px-1 py-0.5 font-semibold rounded-[4px] text-[12px]">Emploi Graphisme</button>
+                    <button class="bg-gray-300 px-1 py-0.5 font-semibold rounded-[4px] text-[12px]">Emploi Communication</button>
+                    <button class="bg-gray-300 px-1 py-0.5 font-semibold rounded-[4px] text-[12px]">Emploi Education</button>
+                    <button class="bg-gray-300 px-1 py-0.5 font-semibold rounded-[4px] text-[12px]">Emploi Industrie</button>
+                    <button class="bg-gray-300 px-1 py-0.5 font-semibold rounded-[4px] text-[12px]">Emploi Tourisme</button>
+                    <button class="bg-gray-300 px-1 py-0.5 font-semibold rounded-[4px] text-[12px]">Emploi Secrétariat</button>
+                    <button class="bg-gray-300 px-1 py-0.5 font-semibold rounded-[4px] text-[12px]">Emploi Santé</button>
+                    <button class="bg-gray-300 px-1 py-0.5 font-semibold rounded-[4px] text-[12px]">Emploi Juridique</button>
+                    <button class="bg-gray-300 px-1 py-0.5 font-semibold rounded-[4px] text-[12px]">Emploi Médias</button>
+                    <button class="bg-gray-300 px-1 py-0.5 font-semibold rounded-[4px] text-[12px]">Emploi Logistique</button>
+                    <button class="bg-gray-300 px-1 py-0.5 font-semibold rounded-[4px] text-[12px]">Emploi Restauration</button>
+                    <button class="bg-gray-300 px-1 py-0.5 font-semibold rounded-[4px] text-[12px]">Emploi Environnement et développement durable</button>
+                    <button class="bg-gray-300 px-1 py-0.5 font-semibold rounded-[4px] text-[12px]">Emploi Economie collaborative</button>
+                    <button class="bg-gray-300 px-1 py-0.5 font-semibold rounded-[4px] text-[12px]">Emploi Hotellerie</button>
+                    <button class="bg-gray-300 px-1 py-0.5 font-semibold rounded-[4px] text-[12px]">Emploi Compabilité</button>
+                    <button class="bg-gray-300 px-1 py-0.5 font-semibold rounded-[4px] text-[12px]">Emploi Audit</button>
+                </div>
+            </div>
+             <div class="w-[31%]">
+                <h1 class="font-bold text-xl py-2">Entreprises par secteur</h1>
+                <div class="pb-2">
+                    <button class="bg-gray-300 px-1 py-0.5 font-semibold rounded-[4px] text-[12px]">Associations</button>
+                    <button class="bg-gray-300 px-1 py-0.5 font-semibold rounded-[4px] text-[12px]">EEntreprises Culture-Média-Divertissement</button>
+                    <button class="bg-gray-300 px-1 py-0.5 font-semibold rounded-[4px] text-[12px]">Entreprises Distribution</button>
+                    <button class="bg-gray-300 px-1 py-0.5 font-semibold rounded-[4px] text-[12px]">Entreprise Conseil-Audit</button>
+                    <button class="bg-gray-300 px-1 py-0.5 font-semibold rounded-[4px] text-[12px]">Entreprises Education-Formation-Recrutement</button>
+                    <button class="bg-gray-300 px-1 py-0.5 font-semibold rounded-[4px] text-[12px]">Entreprise Immobilier</button>
+                    <button class="bg-gray-300 px-1 py-0.5 font-semibold rounded-[4px] text-[12px]">Entreprise Informatique</button>
+                    <button class="bg-gray-300 px-1 py-0.5 font-semibold rounded-[4px] text-[12px]">Entreprises Restauration</button>
+                    <button class="bg-gray-300 px-1 py-0.5 font-semibold rounded-[4px] text-[12px]">Entreprises Transport</button>
+                    <button class="bg-gray-300 px-1 py-0.5 font-semibold rounded-[4px] text-[12px]">Entreprises Industrie</button>
+                    <button class="bg-gray-300 px-1 py-0.5 font-semibold rounded-[4px] text-[12px]">Entreprises Logistique</button>
+                    <button class="bg-gray-300 px-1 py-0.5 font-semibold rounded-[4px] text-[12px]">Entreprises B Corp</button>
+                    <button class="bg-gray-300 px-1 py-0.5 font-semibold rounded-[4px] text-[12px]">Entreprises Architectures</button>
+                </div>
+            </div>
+        </section>
+        <hr class="mt-6">
+         <section class="w-full flex gap-6">
+            <div class="w-[48%] pl-4">
+                <h1 class="font-bold text-xl py-2">Secteurs d'activite</h1>
+                <div>
+                    <button class="bg-gray-300 px-1 py-0.5 font-semibold rounded-[4px] text-[12px]">Emploi Développeur</button>
+                    <button class="bg-gray-300 px-1 py-0.5 font-semibold rounded-[4px] text-[12px]">Emploi Développeur-front-end</button>
+                    <button class="bg-gray-300 px-1 py-0.5 font-semibold rounded-[4px] text-[12px]">Emploi Community Manager</button>
+                    <button class="bg-gray-300 px-1 py-0.5 font-semibold rounded-[4px] text-[12px]">Emploi Product manager</button>
+                    <button class="bg-gray-300 px-1 py-0.5 font-semibold rounded-[4px] text-[12px]">Emploi Développeur mobile</button>
+                    <button class="bg-gray-300 px-1 py-0.5 font-semibold rounded-[4px] text-[12px]">Emploi Vendeur</button>
+                    <button class="bg-gray-300 px-1 py-0.5 font-semibold rounded-[4px] text-[12px]">Emploi Responsable Communication</button>
+                    <button class="bg-gray-300 px-1 py-0.5 font-semibold rounded-[4px] text-[12px]">Emploi Secrétaire</button>
+                    <button class="bg-gray-300 px-1 py-0.5 font-semibold rounded-[4px] text-[12px]">Emploi Graphiste</button>
+                </div>
+            </div>
+             <div class="w-[48%]">
+                <h1 class="font-bold text-xl py-2">Entreprises par régions</h1>
+                <div>
+                    <button class="bg-gray-300 px-1 py-0.5 font-semibold rounded-[4px] text-[12px]">Emploi Business</button>
+                    <button class="bg-gray-300 px-1 py-0.5 font-semibold rounded-[4px] text-[12px]">Emploi Ressources humaines</button>
+                    <button class="bg-gray-300 px-1 py-0.5 font-semibold rounded-[4px] text-[12px]">Emploi Informatique</button>
+                    <button class="bg-gray-300 px-1 py-0.5 font-semibold rounded-[4px] text-[12px]">Emploi Marketing</button>
+                    <button class="bg-gray-300 px-1 py-0.5 font-semibold rounded-[4px] text-[12px]">Emploi Graphisme</button>
+                    <button class="bg-gray-300 px-1 py-0.5 font-semibold rounded-[4px] text-[12px]">Emploi Communication</button>
+                </div>
+            </div>
+            </div>
+        </section>
+        <!-- footer -->
+        <footer class="w-full bg-black mt-12">
+        <div class="flex justify-between w-full bg-black text-white pt-12">
+        <div class="w-1/4">
+          <p class="ml-5 text-[25px] font-semibold">Akazilink</p>
+        </div>
+        <div class="w-1/4">
+          <h2 class="font-semibold">A PROPOS</h2>
+          <ul class="mt-3 text-[14px] text-gray-300 font-semibold">
+            <li class="mb-2">Concept</li>
+            <li class="mb-2">Qui sommes nous</li>
+            <li class="mb-2">Offres d'emplois</li>
+            <li class="mb-2">Offres de stage</li>
+            <li class="mb-2">Centre d'aide</li>
+          </ul>
+        </div>
+        <div class="w-1/4">
+          <h2 class="font-semibold">NOUS RENCONTRER</h2>
+          <ul class="mt-3 text-[14px] text-gray-300 font-semibold">
+            <li class="mb-2">Human after all</li>
+            <li class="mb-2">Presse</li>
+            <li class="mb-2">Jobs</li>
+            <li class="mb-2">Tarifs</li>
+            <li class="mb-2">Besoin d'aide ?</li>
+            <li class="mb-2">Assistance entreprise</li>
+          </ul>
+        </div>
+        <div class="w-1/4 pr-2">
+          <h2 class="font-semibold text-[18px]">LA NAWSLETTER QUI FAIT LE TAF</h2>
+          <p class="mb-3 text-[14px]">Une fois par semaine, des histoires, des jobs et des conseils dans votre boite email</p>
+          <form action="" class="border rounded-[5px] bg-white">
+            <input class="py-1 text-black pl-2 rounded-[5px] w-[60%] outline-none" type="email" placeholder="Email" required>
+            <button class="bg-amber-300 py-2 text-black rounded-[5px] px-2 text-[13px] w-[38.43%]" type="submit">Je m'abonne</button>
+          </form>
+          <p class="text-[10px] text-gray-400">Vous pouvez vous desabonner a tout moment. On n'est pas susceptibles, promis. Pour en savoir plus sur notre politique de protection des donnees. <a class="text-white hover:border-b" href="#">Cliquer ici</a></p>
+        </div>
+      </div>
+      <hr class="bg-gray-600 text-gray-600 w-[96%] ml-5">
+      <div class="text-white flex justify-between px-6 mt-6 pb-6">
+          <p class="font-bold text-[18px]">Solutions</p>
+          <div>
+            <button class="border font-semibold shadow-lg rounded-xs px-2 text-[13px] py-1.5">Employeurs</button>
+            <button class="bg-white text-black py-1.5 rounded-xs text-[13px] font-semibold px-2">Mon espace employeur</button>
+          </div>
+        </div>
+        <hr class="bg-gray-600 text-gray-600 w-[96%] ml-5">
+        <div>
+        <ul>
+          <li>Mentions legales</li>
+          <li>CGU</li>
+          <li>Politique de confidentialite</li>
+          <li>Charte Welcome to the Akazilink</li>
+          <li>Politique Cookies</li>
+          <li>Gestion des Cookies</li>
+        </ul>
+        </div>
+      </footer>
+</body>
+</html>
