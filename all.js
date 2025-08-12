@@ -1,7 +1,7 @@
   const loading = document.getElementById("loading");
   if(loading) {
     setTimeout(() => {
-      window.location.href = "./index.html"
+      window.location.href = "./index1.html"
     },3000);
   }
 
@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if(deconnection) {
     deconnection.addEventListener("click", () => {
       if(confirm("Voulez-vous vraiment vous déconnecter ?")) {
-        window.location.href = "/index.html";
+        window.location.href = "/index1.html";
       }
     })
   }
@@ -163,7 +163,7 @@ document.addEventListener("DOMContentLoaded", () => {
      const trouverEntreprise = document.getElementById("TrouverEntreprise");
      if (trouverEntreprise) {
        trouverEntreprise.addEventListener("click", () => {
-         window.location.href = "./index1.html";
+         window.location.href = "./index2.html";
        });
      }
      let candidature = document.getElementById("Candidatures");
@@ -189,7 +189,7 @@ document.addEventListener("DOMContentLoaded", () => {
      const job = document.getElementById("Job");
   if (job) {
     job.addEventListener("click", () => {
-      window.location.href = "./index.html";
+      window.location.href = "./index1.html";
     });
   }
   const candidatures1 = document.getElementById("Candidatures1");
