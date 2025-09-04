@@ -1,7 +1,7 @@
   const loading = document.getElementById("loading");
   if(loading) {
     setTimeout(() => {
-      window.location.href = "./index1.html"
+      window.location.href = "./index1.php"
     },3000);
   }
 
@@ -29,8 +29,8 @@ const BtnSignUp = document.getElementById("BtnSignUp");
       } else {
         stockage.push({ Fullname, emailSignup, passwordSignup });
         localStorage.setItem("user", JSON.stringify(stockage));
-        localStorage.removeItem("profilePic")
-        window.location.href = "/accueil.html";
+        localStorage.removeItem("profilePic");
+        window.location.href = "./accueil.php";
       }
     });
   }
@@ -46,7 +46,7 @@ const BtnSignUp = document.getElementById("BtnSignUp");
       // Correction : vérifier l'email et le mot de passe
       const existe = stockage.find(u => u.emailSignup === emailSignin && u.passwordSignup === passwordSignin);
       if (existe) {
-        window.location.href = "/accueil.html";
+        window.location.href = "./accueil.html";
       } else {
         alert("Email ou mot de passe incorrect");
       }
@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if(deconnection) {
     deconnection.addEventListener("click", () => {
       if(confirm("Voulez-vous vraiment vous déconnecter ?")) {
-        window.location.href = "/index1.html";
+        window.location.href = "./index1.php";
       }
     })
   }
@@ -128,7 +128,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const Pcours = document.getElementById("encours");
     if(Pcours) {
       Pcours.addEventListener("click", () => {
-         window.location.href = "/candidature.html";
+         window.location.href = "./candidature.php";
        });
     }
 
@@ -136,7 +136,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const passees = document.getElementById("passées");
     if(passees) {
       passees.addEventListener("click", () => {
-        window.location.href = "/candidature2.html"
+        window.location.href = "./candidature2.php"
       })
     }
 
@@ -144,13 +144,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const btnjob = document.getElementById("btnJob");
     if(btnjob) {
       btnjob.addEventListener("click", () => {
-        window.location.href = "/nosoffres.html"
+        window.location.href = "./nosoffres.php"
       });
     }
     const btnEntrep = document.getElementById("btnEntreprise");
     if(btnEntrep) {
       btnEntrep.addEventListener("click", () => {
-        window.location.href = "/entreprise.html"
+        window.location.href = "./entreprise.php"
       });
     }
     //////
@@ -163,7 +163,7 @@ document.addEventListener("DOMContentLoaded", () => {
      const trouverEntreprise = document.getElementById("TrouverEntreprise");
      if (trouverEntreprise) {
        trouverEntreprise.addEventListener("click", () => {
-         window.location.href = "./index2.html";
+         window.location.href = "./index2.php";
        });
      }
      let candidature = document.getElementById("Candidatures");
@@ -189,7 +189,7 @@ document.addEventListener("DOMContentLoaded", () => {
      const job = document.getElementById("Job");
   if (job) {
     job.addEventListener("click", () => {
-      window.location.href = "./index1.html";
+      window.location.href = "./index1.php";
     });
   }
   const candidatures1 = document.getElementById("Candidatures1");
@@ -211,13 +211,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const emploJob = document.getElementById("Empljob");
   if(emploJob) {
     emploJob.addEventListener("click", ()=> {
-      window.location.href = "/nosoffres.html"
+      window.location.href = "./nosoffres.php"
     })
   }
    const empltrouverEntreprise = document.getElementById("EmplTrouvEntreprise");
   if(empltrouverEntreprise) {
     empltrouverEntreprise.addEventListener("click", () => {
-      window.location.href = "/entreprise.html";
+      window.location.href = "./entreprise.php";
     });
   }
    const emplcandid = document.getElementById("EmplCandid");
@@ -312,7 +312,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const offrEntreprise = document.getElementById("offrEntrep");
   if(offrEntreprise) {
     offrEntrep.addEventListener("click", () => {
-      window.location.href = "/entreprise.html";
+      window.location.href = "./entreprise.php";
     });
   }
 
@@ -321,12 +321,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const entrepJob = document.getElementById("entrJob")
   if(entrepJob) {
      entrepJob.addEventListener("click", () => {
-      window.location.href = "/nosoffres.html";
+      window.location.href = "./nosoffres.php";
     });
   }
 
-
-
-
-
+  const trouverJob = document.getElementById("TrouverJob");
+  if (trouverJob) {
+    trouverJob.addEventListener("click", () => {
+      window.location.href = "./index1.php";
     });
+  }
+
+});
